@@ -1,15 +1,10 @@
-from functions import *
-student_data = []
+from function2 import write_student_info, write_student_marks, calculate_average, bifurcate_grades
 
-count = int(input("enter count: "))
+n = int(input("Enter number of students: "))
 
-getdata(student_data, count)
+write_student_info(n)
+write_student_marks(n)
+calculate_average()
+bifurcate_grades()
 
-subjects = []
-
-sub_count = int(input("enter subject count: "))
-
-add_sub(student_data, count, subjects, sub_count)
-
-write_data(student_data, count)
-
+print("Data processed successfully.")
