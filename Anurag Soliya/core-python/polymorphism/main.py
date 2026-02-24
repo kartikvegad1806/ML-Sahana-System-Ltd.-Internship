@@ -32,7 +32,9 @@ if choice == 1:
                 break
             else:
                 continue_choice = int(input("enter 1 to continue and 0 to exit"))
+
 elif choice == 2:
+
     h1 = Axis(balance)
     continue_choice = 1
     while(continue_choice):
@@ -60,6 +62,3 @@ elif choice == 2:
                 break
             else:
                 continue_choice = int(input("enter 1 to continue and 0 to exit"))
-
-
-
