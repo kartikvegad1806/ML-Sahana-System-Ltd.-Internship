@@ -9,41 +9,33 @@ for i in range(n):
 print(f"Main list: {ls}")
 print(f"Total: {sum(ls)}")
 
-
-#PENDING
-
-
-
-# # divide the main list into two sublists where total(sum) of both sublists should be equal
-# def divide_list(lst):
-#     total_sum = sum(lst)
+def divide_list(lst):
+    total_sum = sum(lst)
     
-#     # If total sum is odd, equal division is not possible
-#     if total_sum % 2 != 0:
-#         print("Equal division not possible (odd sum)")
-#         return
+    if total_sum % 2 != 0:
+        print("Equal division not possible (odd sum)")
+        return
     
-#     target_sum = total_sum // 2
-#     ls1 = []
-#     ls2 = []
-#     current_sum = 0
+    target_sum = total_sum // 2
+    ls1 = []
+    ls2 = []
+    current_sum = 0
     
-#     # Greedily add elements to ls1 until we reach target sum
-#     for element in lst:
-#         if current_sum + element <= target_sum:
-#             ls1.append(element)
-#             current_sum += element
-#         else:
-#             ls2.append(element)
+    for element in lst:
+        if current_sum + element <= target_sum:
+            ls1.append(element)
+            current_sum += element
+        else:
+            ls2.append(element)
     
-#     # Check if sums are equal
-#     if sum(ls1) == sum(ls2):
-#         print(f"\nls1: {ls1} => {sum(ls1)}")
-#         print(f"ls2: {ls2} => {sum(ls2)}")
-#         print("Equal division successful!")
-#     else:
-#         print(f"ls1: {ls1} => {sum(ls1)}")
-#         print(f"ls2: {ls2} => {sum(ls2)}")
-#         print("Equal division not possible with this arrangement")
+    # Check if sums are equal
+    if sum(ls1) == sum(ls2):
+        print(f"\nls1: {ls1} => {sum(ls1)}")
+        print(f"ls2: {ls2} => {sum(ls2)}")
+        print("Equal division successful!")
+    else:
+        print(f"ls1: {ls1} => {sum(ls1)}")
+        print(f"ls2: {ls2} => {sum(ls2)}")
+        print("Equal division not possible with this arrangement")
 
-# divide_list(ls)
+divide_list(ls)
